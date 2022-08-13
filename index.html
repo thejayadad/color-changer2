@@ -6,23 +6,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        body {
+            display: flex;
+            justify-content: center;
+            height: 100vh;
+            align-items: center;
+            flex-direction: column;
+        }
+        .box {
+            padding: 5px;
+            background: #f1f1f1;
+            display: flex;
+            
+        }
         .box a {
             width: 40px;
             height: 40px;
             float: left;
-            margin: 5px;
             text-indent: -9999px;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        #pink {
+            background: #ff4c80;
+        }
+        #green {
+            background: #1d8459;
+        }
+        #grey{
+            background: #5e5b5c;
+        }
+        #lite{
+
+            background: #d8f3ba;
+        }
+        #hunter{
+            background: #849f6f;
+        }
+        #pink1 {
+            background: #f163d7;
         }
     </style>
 </head>
 <body>
+    <p>Color Pallete Picker</p>
     <div class="box">
-        <a id="red">#e74c3c</a>
-        <a id="blue">#3498db</a>
-        <a id="green">#2ecc71</a>
-        <a id="gray">#34495e</a>
-        <a id="yellow">#f1c40f</a>
-        <a id="orange">#e67e22</a>
+        <a onclick="changeColor('pink')" id="pink">#ff4c80</a>
+        <a onclick="changeColor('green')" id="green">#1d8459</a>
+        <a onclick="changeColor('grey')" id="grey">#5e5b5c</a>
+        <a onclick="changeColor('lite')" id="lite">#d8f3ba</a>
+        <a onclick="changeColor('hunter')" id="hunter">#849f6f</a>
+        <a onclick="changeColor('pink1')" id="pink1">#f163d7</a>
     </div>
+
+    <script>
+        function changeColor(id){
+            document.body.style.background = document.getElementById(id).innerHTML;
+        }
+    </script>
 </body>
 </html>
